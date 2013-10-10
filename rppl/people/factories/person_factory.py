@@ -11,7 +11,7 @@ class PersonFactory(factory.django.DjangoModelFactory):
 
     first_name = 'John'
     last_name = 'Doe'
-    username = 'john'
+    username = factory.Sequence(lambda n: 'John%s' % n)
     email = 'john@rosedu.org'
     password = make_password('rosedu')
 
